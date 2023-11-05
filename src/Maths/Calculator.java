@@ -27,6 +27,11 @@ public class Calculator {
                 case "/" -> System.out.println(operators.divide(a, b));
                 default -> System.out.println("Invalid operator");
             }
+            System.out.println("Do you want to continue? (y/n)");
+            String playAgain = new java.util.Scanner(System.in).next();
+            if (playAgain.equals("n")) {
+                break;
+            }
         }
     }
 }
