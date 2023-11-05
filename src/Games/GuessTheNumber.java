@@ -26,9 +26,11 @@ public class GuessTheNumber {
                 }
             }
             System.out.println("Do you want to play again? (y/n)");
-            String playAgain = scanner.next();
+            String playAgain = new java.util.Scanner(System.in).next();
             if (playAgain.equals("n")) {
                 break;
+            } else if (playAgain.equals("y")) {
+                System.out.println("Guess the number between 1 and 100");
             }
         }
     }

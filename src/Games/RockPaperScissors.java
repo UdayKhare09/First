@@ -1,7 +1,7 @@
 package Games;
 
-public class StonePaper {
-    public void stonePaper() {
+public class RockPaperScissors {
+    public void rockPaperScissors() {
         System.out.println("Welcome to Stone Paper Scissors");
         while (true) {
             System.out.println("How many rounds do you want to play?");
