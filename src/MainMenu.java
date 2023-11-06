@@ -17,6 +17,7 @@ public class MainMenu {
                     Maths.MathMenu.mathmenu();
                 }
                 case 3 -> System.exit(0);
+                default -> System.out.println("Invalid choice");
             }
         }
     }
