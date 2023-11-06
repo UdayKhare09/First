@@ -1,11 +1,9 @@
-package Maths;
-
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Calculator {
-    public void calculator() {
-        Operators operators = new Operators();
+    public static void calculator() {
+        Math operators = new Math();
         Scanner scanner = new Scanner(System.in);
         int a;
         int b;

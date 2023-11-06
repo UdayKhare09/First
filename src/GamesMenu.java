@@ -1,8 +1,3 @@
-package Games;
-
-import Games.GuessTheNumber;
-import Games.RockPaperScissors;
-
 public class GamesMenu {
     public static void gamesmenu() {
         while (true) {
@@ -18,7 +13,7 @@ public class GamesMenu {
                 RockPaperScissors rockPaperScissors = new RockPaperScissors();
                 rockPaperScissors.rockPaperScissors();
             } else if (choice == 3) {
-                break;
+                MainMenu.mainmenu();
             } else {
                 System.out.println("Invalid choice");
             }

@@ -10,8 +10,8 @@ public class MainMenu {
             java.util.Scanner scanner = new java.util.Scanner(System.in);
             int choice = scanner.nextInt();
             switch (choice) {
-                case 1 -> Games.GamesMenu.gamesmenu();
-                case 2 -> Maths.MathMenu.mathmenu();
+                case 1 -> GamesMenu.gamesmenu();
+                case 2 -> MathMenu.mathmenu();
                 case 3 -> System.exit(0);
                 default -> System.out.println("Invalid choice");
             }
