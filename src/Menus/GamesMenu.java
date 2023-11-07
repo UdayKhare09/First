@@ -1,3 +1,7 @@
+package Menus;
+
+import Games.*;
+
 public class GamesMenu {
     public static void gamesmenu() {
         while (true) {

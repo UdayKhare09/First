@@ -1,3 +1,5 @@
+package Maths;
+
 public class Geometry extends Math {
     public static double areaOfCircle(double radius) {
         return PI * radius * radius;

@@ -1,3 +1,6 @@
+package Menus;
+
+import Maths.*;
 public class TrignoMenu {
     public static void trignomenu() {
         Trigonometry Trignomentry = new Trigonometry();

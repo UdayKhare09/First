@@ -1,7 +1,10 @@
+package Menus;
+
+import Maths.*;
 public class GeoMenu {
     public static void geometry() {
         while (true) {
-            System.out.println("Welcome to the Geometry Menu");
+            System.out.println("Welcome to the Maths.Geometry Menu");
             System.out.println("1. Area");
             System.out.println("2. Perimeter");
             System.out.println("3. Volume");

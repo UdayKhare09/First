@@ -1,3 +1,5 @@
+package Games;
+
 public class RockPaperScissors {
     public void rockPaperScissors() {
         System.out.println("Welcome to Stone Paper Scissors");

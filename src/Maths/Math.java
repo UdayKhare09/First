@@ -1,3 +1,5 @@
+package Maths;
+
 public class Math {
 
     public static double PI = java.lang.Math.PI;

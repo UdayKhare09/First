@@ -1,3 +1,5 @@
+package Maths;
+
 import java.lang.Math;
 public class Trigonometry {
     public double sin(double angle) {

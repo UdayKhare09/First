@@ -1,3 +1,8 @@
+package Menus;
+
+
+import Maths.Calculator;
+
 import java.util.Scanner;
 
 public class MathMenu {
