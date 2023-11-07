@@ -1,5 +1,7 @@
 package Games;
 
+import Menus.GamesMenu;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,13 +27,17 @@ public class GuessTheNumber {
                     break;
                 }
             }
+            while (true){
             System.out.println("Do you want to play again? (y/n)");
             String playAgain = new java.util.Scanner(System.in).next();
             if (playAgain.equals("n")) {
-                break;
+                GamesMenu.gamesmenu();
             } else if (playAgain.equals("y")) {
                 System.out.println("Guess the number between 1 and 100");
+                break;
+            } else {
+                System.out.println("Invalid input");
             }
         }
     }
-}
+}}

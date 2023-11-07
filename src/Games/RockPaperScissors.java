@@ -1,5 +1,7 @@
 package Games;
 
+import Menus.GamesMenu;
+
 public class RockPaperScissors {
     public void rockPaperScissors() {
         System.out.println("Welcome to Stone Paper Scissors");
@@ -54,13 +56,16 @@ public class RockPaperScissors {
                     break;
                 }
             }
-            System.out.println("Do you want to play again? (y/n)");
-            String playAgain = new java.util.Scanner(System.in).next();
-            if (playAgain.equals("n")) {
-                break;
-            } else if (!playAgain.equals("y")) {
-                System.out.println("Invalid input");
-                break;
+            while (true){
+                System.out.println("Do you want to play again? (y/n)");
+                String playAgain = new java.util.Scanner(System.in).next();
+                if (playAgain.equals("n")) {
+                    GamesMenu.gamesmenu();
+                } else if (playAgain.equals("y")) {
+                    break;
+                } else {
+                    System.out.println("Invalid input");
+                }
             }
         }
     }
