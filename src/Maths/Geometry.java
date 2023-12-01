@@ -1,6 +1,6 @@
 package Maths;
 
-public class Geometry extends Math {
+public class Geometry extends MathFun {
     public static double areaOfCircle(double radius) {
         return PI * radius * radius;
     }
@@ -78,7 +78,7 @@ public class Geometry extends Math {
     }
 
     public double surfaceAreaOfCone(double radius, double height) {
-        return PI * radius * (radius + Math.sqrt(height * height + radius * radius));
+        return PI * radius * (radius + MathFun.sqrt(height * height + radius * radius));
     }
 
     public double surfaceAreaOfSphere(double radius) {

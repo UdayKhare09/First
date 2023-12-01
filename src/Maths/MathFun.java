@@ -1,6 +1,6 @@
 package Maths;
 
-public class Math {
+public class MathFun {
 
     public static double PI = java.lang.Math.PI;
 
