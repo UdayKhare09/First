@@ -1,6 +1,5 @@
 package Maths;
 
-import Menus.MainMenu;
 import Menus.MathMenu;
 
 import java.util.Scanner;
@@ -28,7 +27,8 @@ public class Matrix {
                     System.out.println("2. View Matrix A");
                     System.out.println("3. Determinant");
                     System.out.println("4. Square");
-                    System.out.println("5. Back");
+                    System.out.println("5. Eigenvalues");
+                    System.out.println("6. Back");
                     choice = scanner.nextInt();
 
                     if (choice == 1) {
@@ -43,8 +43,18 @@ public class Matrix {
                     } else if (choice == 3) {
                         System.out.println(determinant(matA));
                     } else if (choice == 5) {
+                        double[] eigenValues = MatrixAdv.EigenVal(matA);
+                        if (eigenValues.length == 1) {
+                            System.out.println("The eigenvalue is " + eigenValues[0]);
+                        } else if (eigenValues.length == 2) {
+                            System.out.println("The eigenvalues are " + eigenValues[0] + " and " + eigenValues[1]);
+                        } else {
+                            System.out.println("The eigenvalues are " + eigenValues[0] + ", " + eigenValues[1] + " and " + eigenValues[2]);
+                        }
+                    } else if (choice == 6) {
                         matrix();
-                    } else if (choice == 4) {
+                    }
+                    else if (choice == 4) {
                         multiply(matA, matA);
                         System.out.printf("|%d %d %d|\n" +
                                 "|%d %d %d|\n" +
