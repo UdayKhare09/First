@@ -27,7 +27,7 @@ public class MatrixAdv extends Matrix {
         double[] eigenValues = new double[3];
         for (int i = 0; i < eigenDecomposition.getRealEigenvalues().length; i++) {
             System.out.println(round(eigenDecomposition.getRealEigenvalues()[i]));
-            eigenValues[i] = round(eigenDecomposition.getRealEigenvalues()[i]);
+            eigenValues[i] = eigenDecomposition.getRealEigenvalues()[i];
         }
         return eigenValues;
     }

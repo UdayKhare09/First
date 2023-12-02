@@ -4,10 +4,7 @@ import Menus.MainMenu;
 import Menus.MathMenu;
 
 public class Eqn {
-    static double a;
-    static double b;
-    static double c;
-    static double d;
+
     static double x1;
     static double x2;
     static double x3;
@@ -19,6 +16,10 @@ public class Eqn {
             System.out.println("3. Back");
             System.out.println("Enter your choice: ");
             int choice = new java.util.Scanner(System.in).nextInt();
+            double a;
+            double b;
+            double c;
+            double d;
             if (choice == 1) {
                 System.out.println("Enter the coefficients of the quadratic equation");
                 System.out.println("ax^2 + bx + c = 0");
@@ -75,11 +76,11 @@ public class Eqn {
         }
     }
 
-    public static double[] solveCubicEquation(int A, int B, int C, int D) {
+    public static double[] solveCubicEquation(double A, double B, double C, double D) {
 
-        double a = (double) B / A;
-        double b = (double) C / A;
-        double c = (double) D / A;
+        double a = B / A;
+        double b = C / A;
+        double c = D / A;
 
         double p = b - ((a * a) / 3.0);
         double q = (2 * Math.pow(a, 3) / 27.0) - (a * b / 3.0) + c;
