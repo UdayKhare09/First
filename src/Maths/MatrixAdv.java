@@ -1,9 +1,5 @@
 package Maths;
 
-import org.apache.commons.math3.linear.*;
-
-import static java.lang.StrictMath.round;
-
 public class MatrixAdv extends Matrix {
 
     public static double[][] convertInt2DArrayToDouble2DArray(int[][] int2DArray) {

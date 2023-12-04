@@ -2,7 +2,6 @@ package Menus;
 
 
 import Maths.Calculator;
-import Maths.MathFun;
 
 import java.util.Scanner;
 

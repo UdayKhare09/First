@@ -1,6 +1,3 @@
-import Maths.Eqn;
-import Maths.Matrix;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Games and Math program");

@@ -1,6 +1,5 @@
 package Maths;
 
-import Menus.MainMenu;
 import Menus.MathMenu;
 
 public class Eqn {
