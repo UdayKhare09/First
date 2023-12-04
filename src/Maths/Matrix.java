@@ -43,6 +43,7 @@ public class Matrix {
                     } else if (choice == 3) {
                         System.out.println(determinant(matA));
                     } else if (choice == 5) {
+                        System.out.println("This function is currently under development so it can give wrong answers");
                         double[] eigenValues = MatrixAdv.EigenVal(matA);
                         if (eigenValues.length == 1) {
                             System.out.println("The eigenvalue is " + eigenValues[0]);
