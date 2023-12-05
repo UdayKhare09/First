@@ -17,7 +17,7 @@ public class MatrixAdv extends Matrix {
         return double2DArray;
     }
 
-    public static double[] EigenVal(int[][] matE1) {
+    public static double[] eigenVal(int[][] matE1) {
         double[][] matE = convertInt2DArrayToDouble2DArray(matE1);
         double a = matE[0][0];
         double b = matE[0][1];
@@ -34,4 +34,39 @@ public class MatrixAdv extends Matrix {
         double D = (a*e*i) + (d*h*f) + (b*f*g) - (c*e*g) - (h*f*a) - (d*b*i);
         return Eqn.solveCubicEquation(A, B, C, D);
     }
+
+    public static double[][] echelonForm(int[][] mat) {
+        int numRows = mat.length;
+        int numCols = mat[0].length;
+
+        double[][] matEchelon = convertInt2DArrayToDouble2DArray(mat);
+
+        for (int pivotRow = 0; pivotRow < numRows; pivotRow++) {
+            double pivotElement = matEchelon[pivotRow][pivotRow];
+
+            // Check for division by zero
+            if (pivotElement == 0) {
+                // Handle the case where the pivot element is zero
+                // You may choose to swap rows, or handle it in a way that suits your needs
+                continue;
+            }
+
+            // Normalize the pivot row
+            for (int j = pivotRow; j < numCols; j++) {
+                matEchelon[pivotRow][j] /= pivotElement;
+            }
+
+            // Eliminate entries below the pivot
+            for (int i = pivotRow + 1; i < numRows; i++) {
+                double factor = matEchelon[i][pivotRow];
+                for (int j = pivotRow; j < numCols; j++) {
+                    matEchelon[i][j] -= factor * matEchelon[pivotRow][j];
+                }
+            }
+        }
+
+        return matEchelon;
+    }
+
+
 }

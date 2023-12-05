@@ -28,7 +28,8 @@ public class Matrix {
                     System.out.println("3. Determinant");
                     System.out.println("4. Square");
                     System.out.println("5. Eigenvalues");
-                    System.out.println("6. Back");
+                    System.out.println("6. Echelon Form");
+                    System.out.println("7. Back");
                     choice = scanner.nextInt();
 
                     if (choice == 1) {
@@ -44,7 +45,7 @@ public class Matrix {
                         System.out.println(determinant(matA));
                     } else if (choice == 5) {
                         System.out.println("This function is currently under development so it can give wrong answers");
-                        double[] eigenValues = MatrixAdv.EigenVal(matA);
+                        double[] eigenValues = MatrixAdv.eigenVal(matA);
                         if (eigenValues.length == 1) {
                             System.out.println("The eigenvalue is " + eigenValues[0]);
                         } else if (eigenValues.length == 2) {
@@ -53,9 +54,17 @@ public class Matrix {
                             System.out.println("The eigenvalues are " + eigenValues[0] + ", " + eigenValues[1] + " and " + eigenValues[2]);
                         }
                     } else if (choice == 6) {
+                        System.out.println("The echelon form of the matrix is:");
+                        double[][] matEchelon = MatrixAdv.echelonForm(matA);
+                        for (double[] doubles : matEchelon) {
+                            for (double aDouble : doubles) {
+                                System.out.print(aDouble + " ");
+                            }
+                            System.out.println();
+                        }
+                    } else if (choice == 7) {
                         matrix();
-                    }
-                    else if (choice == 4) {
+                    } else if (choice == 4) {
                         multiply(matA, matA);
                         System.out.printf("|%d %d %d|\n" +
                                 "|%d %d %d|\n" +
